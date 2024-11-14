@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura da tela inteira */
+}
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+ion-tab-bar {
+  height: 56px; /* Altura fixa da barra de navegação */
+  --background: var(--ion-color-light); /* Personalize a cor de fundo */
+  border-top: 1px solid var(--ion-color-medium); /* Linha separadora para estilo */
+}
+ion-tabs {
+  height: 100vh; /* Define altura total da tela para os tabs */
+  display: flex;
+  flex-direction: column;
+
+}
+ion-router-outlet {
+  flex-grow: 1;
+
+}
+
+ion-card {
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.1); /* Leve transparência */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+}

@@ -1,0 +1,91 @@
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/* Global styles */
+:root {
+  --ion-text-color-light: #000000;
+  --ion-text-color-dark: #ffffff;
+  --ion-button-text-color: var(--ion-text-color);
+}
+
+/* Ionic Dark Mode */
+body.dark {
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-button-text-color: var(--ion-text-color-dark);
+
+  ion-toolbar {
+    --background: #1f1f1f;
+    --color: rgb(255, 255, 255);
+  }
+
+  ion-tab-bar {
+    --background: #1f1f1f;
+    --color-selected: #FFA500; /* Cor do ícone selecionado laranja */
+    --color: white; /* Cor dos ícones não selecionados */
+  }
+}
+
+body.light {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-button-text-color: var(--ion-text-color-light);
+}
+
+/* Remover outline dos botões */
+ion-button {
+  --box-shadow: none;
+  --background: none;
+  --border-width: 0;
+  --color: var(--ion-button-text-color);
+}
+
+ion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+ion-card {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+ion-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ion-card-title, ion-card-content {
+  text-align: center;
+  color: var(--ion-text-color);
+}
+html, body, ion-app, ion-content {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ion-tabs {
+  height: 100%;
+}
+
+ion-content {
+  flex-grow: 1;
+  --padding-bottom: 56px; /* Espaco para a Tab Bar */
+}

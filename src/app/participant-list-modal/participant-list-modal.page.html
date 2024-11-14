@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Participantes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let participant of participants">
+      <ion-label>
+        <h2>{{ participant.nomeCompleto }}</h2>
+        <p>{{ participant.numeroTelefone }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

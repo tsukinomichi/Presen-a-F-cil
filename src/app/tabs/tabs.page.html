@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <!-- Logo -->
+      <ion-buttons slot="start">
+        <ion-img src="assets/imgs/logo.png" style="width: 50px; height: 50px; margin-right: 10px;"></ion-img>
+      </ion-buttons>
+
+      <!-- Título Centralizado -->
+      <ion-title style="text-align: center; flex-grow: 1; color: orange;">GILEADE</ion-title>
+
+      <!-- Botões de Notificação e Tema -->
+      <div style="display: flex; align-items: center;">
+        <ion-button (click)="goToNotifications()" fill="clear" size="big">
+          <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="toggleTheme()" fill="clear" size="big">
+          <ion-icon 
+            slot="icon-only" 
+            [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'">
+          </ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="false" class="ion-padding" style="pointer-events: auto;">
+  <ion-tabs>
+    <!-- Barra de navegação inferior das abas -->
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab1" href="/tabs/tab1">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-label>Pesquisa</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab3" href="/tabs/tab3">
+        <ion-icon name="checkbox-outline"></ion-icon>
+        <ion-label>Eventos</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

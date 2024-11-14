@@ -1,0 +1,8 @@
+{
+  "name": "Gerenciador de cronogramas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "1d80d678"
+}

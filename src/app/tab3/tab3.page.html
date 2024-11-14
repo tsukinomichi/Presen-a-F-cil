@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="false">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Meus Eventos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngIf="events$ | async as events">
+        <ion-item *ngFor="let event of events">
+          <ion-thumbnail slot="start">
+            <img [src]="event.imageUrl" alt="Imagem do evento" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ event.title }}</h2>
+            <p>{{ event.description }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <p *ngIf="(events$ | async)?.length === 0">Nenhum evento encontrado</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
